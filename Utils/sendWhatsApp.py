@@ -1,7 +1,7 @@
 import pyautogui, pyperclip, time
 
-INPUT_X = 0
-INPUT_Y = 0
+INPUT_X = 655
+INPUT_Y = 730
 
 def send_whatsapp_message(message):
     pyautogui.click(INPUT_X, INPUT_Y)

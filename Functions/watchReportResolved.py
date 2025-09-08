@@ -1,8 +1,6 @@
-import time
+import pyautogui, pyperclip, time
 from datetime import datetime
 from Database.db import get_connection
-import pyautogui
-import pyperclip
 from Utils.sendWhatsApp import INPUT_X, INPUT_Y
 
 pyautogui.FAILSAFE = False

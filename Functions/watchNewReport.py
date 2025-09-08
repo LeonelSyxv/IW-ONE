@@ -1,6 +1,4 @@
-import time
-import pyautogui
-import pyperclip
+import pyautogui, pyperclip, time
 from collections import defaultdict
 from Database.db import get_connection
 from Utils.sendWhatsApp import INPUT_X, INPUT_Y

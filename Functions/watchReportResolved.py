@@ -48,12 +48,16 @@ def resolved_watcher(poll_interval=30, whatsapp_lock=None, recently_resolved_cha
                         )
 
                         with whatsapp_lock:
+                            pyautogui.hotkey("ctrl", "tab")
+                            time.sleep(2)
                             pyautogui.click(INPUT_X, INPUT_Y)
                             time.sleep(0.5)
                             pyperclip.copy(message)
                             pyautogui.hotkey("ctrl", "v")
                             time.sleep(1)
                             pyautogui.press("enter")
+                            pyautogui.hotkey("ctrl", "tab")
+                            time.sleep(2)
                         print(f"WhatsApp message sent: {message}")
 
                         if recently_resolved_channels is not None:

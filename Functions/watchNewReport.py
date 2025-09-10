@@ -102,6 +102,7 @@ def latest_watcher(poll_interval=30, whatsapp_lock=None):
                     )
 
                 for stage, channel_list in grouped_by_stage.items():
+
                     sorted_lines = sorted(
                         [f"• {label}: {text}" for label, text in channel_list],
                         key=lambda line: int(line.split("Canal ")[1].split(" ")[0])
@@ -116,12 +117,16 @@ def latest_watcher(poll_interval=30, whatsapp_lock=None):
 
                     if whatsapp_lock:
                         with whatsapp_lock:
+                            pyautogui.hotkey("ctrl", "tab")
+                            time.sleep(2)
                             pyautogui.click(INPUT_X, INPUT_Y)
                             time.sleep(0.5)
                             pyperclip.copy(message)
                             pyautogui.hotkey("ctrl", "v")
                             time.sleep(1)
                             pyautogui.press("enter")
+                            pyautogui.hotkey("ctrl", "tab")
+                            time.sleep(2)
 
                     print(f"WhatsApp message sent for stage '{stage}':\n{message}\n")
 

@@ -2,3 +2,4 @@ pymysql
 pyautogui
 pyperclip
 pynput
+python-dotenv

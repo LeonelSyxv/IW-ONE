@@ -19,6 +19,7 @@ venv/
 # Docker
 *.log
 docker-compose.override.yml
+iw-one.tar
 
 # Others
 .DS_Store

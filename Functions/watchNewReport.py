@@ -118,15 +118,16 @@ def latest_watcher(poll_interval=30, whatsapp_lock=None):
                     if whatsapp_lock:
                         with whatsapp_lock:
                             pyautogui.hotkey("ctrl", "tab")
-                            time.sleep(2)
+                            time.sleep(3)
                             pyautogui.click(INPUT_X, INPUT_Y)
                             time.sleep(0.5)
                             pyperclip.copy(message)
                             pyautogui.hotkey("ctrl", "v")
                             time.sleep(1)
                             pyautogui.press("enter")
+                            time.sleep(3)
                             pyautogui.hotkey("ctrl", "tab")
-                            time.sleep(2)
+                            time.sleep(3)
 
                     print(f"WhatsApp message sent for stage '{stage}':\n{message}\n")
 
